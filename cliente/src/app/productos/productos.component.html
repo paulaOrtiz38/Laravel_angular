@@ -1,0 +1,32 @@
+
+
+  <h4>Gestión Productos</h4>
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="table-dark">
+              <tr>
+                  <th>Opciones</th>
+                  <th>NOMBRE</th>
+                  <th>PRECIO</th>
+                  <th>OBSERVACIONES</th>
+                  <th>CANTIDAD</th>
+                  <th>ESTADO</th>
+
+              </tr>
+          </thead>
+          <tbody>
+                  <tr *ngFor="let producto of productos | ObjToArray">
+                      <td>
+                        <a class="btn btn-warning btn-sm" routerLink="/form/{{producto.id}}">Editar</a>
+                      </td>
+                      <td>{{producto.nombre}}</td>
+                      <td>{{producto.precio}}</td>
+                      <td>{{producto.observaciones}}</td>
+                      <td>{{producto.cantidad}}</td>
+                      <td>{{producto.estado}}</td>
+                  </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
